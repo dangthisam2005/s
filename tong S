@@ -1,0 +1,26 @@
+#include <stdio.h>
+int Sum(int N) {
+    int S = 0;
+for (int i = 1; i <= N; i++) {
+        int NN;
+        if (i < 10) {
+            NN = i * 10 + i;  
+        } else {
+            NN = i * 100 + i; }
+        S += NN;
+    }
+
+    return S;
+}
+
+int main() {
+    int N,S;
+    do {
+        printf("Nhap N>=10: N= ");
+        scanf("%d", &N);
+    } while (N < 10);
+    S = Sum (N);
+    printf("S = %d\n", S );
+
+    return 0;
+}
